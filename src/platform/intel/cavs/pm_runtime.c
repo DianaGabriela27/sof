@@ -125,7 +125,7 @@ static inline void cavs_pm_runtime_dis_dmic_clk_gating(uint32_t index)
 	|| defined(CONFIG_SUECREEK)
 	/* Disable DMIC clock gating */
 	io_reg_write(DMICLCTL,
-		    (io_reg_read(DMICLCTL) | DMIC_DCGD));
+		     (io_reg_read(DMICLCTL) | DMIC_DCGD));
 #endif
 }
 
@@ -145,7 +145,7 @@ static inline void cavs_pm_runtime_en_dmic_clk_gating(uint32_t index)
 	|| defined(CONFIG_SUECREEK)
 	/* Enable DMIC clock gating */
 	io_reg_write(DMICLCTL,
-		    (io_reg_read(DMICLCTL) & ~DMIC_DCGD));
+		     (io_reg_read(DMICLCTL) & ~DMIC_DCGD));
 #endif
 }
 
@@ -156,7 +156,7 @@ static inline void cavs_pm_runtime_en_dmic_power(uint32_t index)
 	|| defined(CONFIG_SUECREEK)
 	/* Enable DMIC power */
 	io_reg_write(DMICLCTL,
-		    (io_reg_read(DMICLCTL) | DMICLCTL_SPA));
+		     (io_reg_read(DMICLCTL) | DMICLCTL_SPA));
 #endif
 }
 
@@ -167,7 +167,7 @@ static inline void cavs_pm_runtime_dis_dmic_power(uint32_t index)
 	|| defined(CONFIG_SUECREEK)
 	/* Disable DMIC power */
 	io_reg_write(DMICLCTL,
-		    (io_reg_read(DMICLCTL) & (~DMICLCTL_SPA)));
+		     (io_reg_read(DMICLCTL) & (~DMICLCTL_SPA)));
 #endif
 }
 #endif /* #if defined(CONFIG_CAVS_DMIC) */

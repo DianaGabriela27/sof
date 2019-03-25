@@ -88,14 +88,14 @@ static struct block_map buf_heap_map[] = {
 
 static struct block_map hp_buf_heap_map[] = {
 	BLOCK_DEF(HEAP_HP_BUFFER_BLOCK_SIZE, HEAP_HP_BUFFER_COUNT,
-		hp_buf_block),
+		  hp_buf_block),
 };
 
 /* To be removed if Apollolake gets LP memory*/
 #ifndef CONFIG_APOLLOLAKE
 static struct block_map lp_buf_heap_map[] = {
 	BLOCK_DEF(HEAP_LP_BUFFER_BLOCK_SIZE, HEAP_LP_BUFFER_COUNT,
-			  lp_buf_block),
+		  lp_buf_block),
 };
 #endif
 

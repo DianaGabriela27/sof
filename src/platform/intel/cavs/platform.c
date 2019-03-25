@@ -325,7 +325,7 @@ int platform_boot_complete(uint32_t boot_message)
 	mailbox_dspbox_write(0, &ready, sizeof(ready));
 #if defined(CONFIG_MEM_WND)
 	mailbox_dspbox_write(sizeof(ready), &sram_window,
-		sram_window.ext_hdr.hdr.size);
+			     sram_window.ext_hdr.hdr.size);
 #endif // defined(CONFIG_MEM_WND)
 
 #if CAVS_VERSION == CAVS_VERSION_1_5
@@ -384,18 +384,18 @@ static void platform_memory_windows_init(void)
 static void platform_init_hw(void)
 {
 	io_reg_write(DSP_INIT_GENO,
-		GENO_MDIVOSEL | GENO_DIOPTOSEL);
+		     GENO_MDIVOSEL | GENO_DIOPTOSEL);
 
 	io_reg_write(DSP_INIT_IOPO,
-		IOPO_DMIC_FLAG | IOPO_I2S_FLAG);
+		     IOPO_DMIC_FLAG | IOPO_I2S_FLAG);
 
 	io_reg_write(DSP_INIT_ALHO,
-		ALHO_ASO_FLAG | ALHO_CSO_FLAG | ALHO_CFO_FLAG);
+		     ALHO_ASO_FLAG | ALHO_CSO_FLAG | ALHO_CFO_FLAG);
 
 	io_reg_write(DSP_INIT_LPGPDMA(0),
-		LPGPDMA_CHOSEL_FLAG | LPGPDMA_CTLOSEL_FLAG);
+		     LPGPDMA_CHOSEL_FLAG | LPGPDMA_CTLOSEL_FLAG);
 	io_reg_write(DSP_INIT_LPGPDMA(1),
-		LPGPDMA_CHOSEL_FLAG | LPGPDMA_CTLOSEL_FLAG);
+		     LPGPDMA_CHOSEL_FLAG | LPGPDMA_CTLOSEL_FLAG);
 }
 #endif
 
