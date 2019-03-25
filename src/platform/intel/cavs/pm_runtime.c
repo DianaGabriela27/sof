@@ -151,7 +151,7 @@ static inline void cavs_pm_runtime_en_dmic_clk_gating(uint32_t index)
 
 static inline void cavs_pm_runtime_en_dmic_power(uint32_t index)
 {
-	(void) index;
+	(void)index;
 #if defined(CONFIG_CANNONLAKE) || defined(CONFIG_ICELAKE) || \
 	    defined(CONFIG_SUECREEK)
 	/* Enable DMIC power */
@@ -162,7 +162,7 @@ static inline void cavs_pm_runtime_en_dmic_power(uint32_t index)
 
 static inline void cavs_pm_runtime_dis_dmic_power(uint32_t index)
 {
-	(void) index;
+	(void)index;
 #if defined(CONFIG_CANNONLAKE) || defined(CONFIG_ICELAKE) || \
 	    defined(CONFIG_SUECREEK)
 	/* Disable DMIC power */
