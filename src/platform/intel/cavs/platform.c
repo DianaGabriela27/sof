@@ -406,8 +406,8 @@ int platform_init(struct sof *sof)
 #endif
 	int ret;
 
-#if defined(CONFIG_CANNONLAKE) || defined(CONFIG_ICELAKE) \
-	|| defined(CONFIG_SUECREEK)
+#if defined(CONFIG_CANNONLAKE) || defined(CONFIG_ICELAKE) || \
+	    defined(CONFIG_SUECREEK)
 	trace_point(TRACE_BOOT_PLATFORM_ENTRY);
 	platform_init_hw();
 #endif
