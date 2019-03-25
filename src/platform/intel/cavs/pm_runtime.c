@@ -148,6 +148,7 @@ static inline void cavs_pm_runtime_en_dmic_clk_gating(uint32_t index)
 		    (io_reg_read(DMICLCTL) & ~DMIC_DCGD));
 #endif
 }
+
 static inline void cavs_pm_runtime_en_dmic_power(uint32_t index)
 {
 	(void) index;
@@ -158,6 +159,7 @@ static inline void cavs_pm_runtime_en_dmic_power(uint32_t index)
 		    (io_reg_read(DMICLCTL) | DMICLCTL_SPA));
 #endif
 }
+
 static inline void cavs_pm_runtime_dis_dmic_power(uint32_t index)
 {
 	(void) index;

@@ -75,7 +75,9 @@ static struct dai ssp[2] = {
 		}
 	},
 	.ops		= &ssp_ops,
-}};
+}
+
+};
 
 static struct dai_type_info dti[] = {
 	{
